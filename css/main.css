@@ -1,0 +1,802 @@
+/* var text-decoration */
+
+@font-face {
+    font-family: myfont;
+    src: url(../fonts/ufonts.com_tw-cen-mt.ttf);
+}
+
+/*--
+    Common Css
+--*/
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: myfont;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+a:focus {
+    outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    font-family: myfont;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0px;
+    font-family: myfont;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a,
+a:active,
+a:focus,
+a:active {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+
+
+/*============== Mixins style start ================*/
+
+
+
+/*--
+    custom heading Start
+--*/
+
+.heading {
+    text-align: center;
+    font-weight: 500;
+    color: #2E2E2E;
+    padding: 40px 0px;
+    position: relative;
+}
+
+.heading span {
+    font-size: 45px;
+    color:#0cbaba;
+    font-weight: 600;
+}
+
+.heading:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 140px;
+    height: 1px;
+    background: #C8C1B3;
+    margin-left: -70px;
+}
+
+/*--
+    custom heading Start
+--*/
+
+.title {
+    color: #2E2E2E;
+    text-transform: uppercase;
+    padding: 30px 0px;
+}
+
+.title span {
+    color: #FF5333;
+}
+
+.before-border {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 140px;
+    height: 1px;
+    background: #C8C1B3;
+    margin-left: -70px;
+}
+
+
+
+/*============== Mixins style close ================*/
+
+/*--
+    header-img start Start
+--*/
+
+.overlay {
+    position: relative;
+}
+
+.overlay:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/overlay-pattern.png") #000000;
+    opacity: 0.3;
+}
+
+/*--
+    nav Start
+--*/
+
+.navigation {
+    position: sticky;
+    top: 85px;
+}
+
+nav {
+    z-index: 9;
+    width: 100%;
+}
+
+nav .block {
+    margin-top: -85px;
+    background:goldenrod;
+    padding: 25px 40px;
+    background:goldenrod;
+}
+
+nav .block .navbar-default {
+    border: none;
+    border-radius: 0px;
+    margin-bottom: 0;
+    background: none;
+}
+
+nav .block .navbar-default .navbar-brand {
+    padding-left: 0px;
+    scroll-behavior: smooth;
+}
+
+nav .block .navbar-default .navbar-nav {
+    padding-top: 10px;
+}
+
+nav .block .navbar-default .navbar-nav>li>a {
+    color: #2E2E2E;
+    padding: 10px 0px;
+    margin: 0px 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+nav .block .navbar-default .navbar-nav>li>a:before {
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    height: 2px;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+    width: 0;
+}
+
+nav .block .navbar-default .navbar-nav>li>a:hover:before {
+    background-color:yellow;
+    content: "";
+    width: 100%;
+}
+
+nav .block .navbar-default .navbar-nav>li.current>a {
+    color: #2E2E2E;
+    padding: 10px 0px;
+    margin: 0px 15px;
+}
+
+nav .block .navbar-default .navbar-nav>li.current>a:before {
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    height: 2px;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+    width: 100%;
+    background-color:yellow;
+}
+
+nav .block .navbar-default .navbar-nav>.active>a,
+nav .block .navbar-default .navbar-nav>.active>a:focus,
+nav .block .navbar-default .navbar-nav>.active>a:hover {
+    background: none;
+}
+
+nav .block .navbar-default .navbar-nav>.active>a:before,
+nav .block .navbar-default .navbar-nav>.active>a:focus:before,
+nav .block .navbar-default .navbar-nav>.active>a:hover:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background:yellow;
+}
+
+/*--
+    about-us Start
+--*/
+
+#about-us {
+    padding: 100px 0px;
+    background: #F6F6F6;
+    scroll-behavior: smooth;
+}
+
+#about-us .block {
+    text-align: center;
+}
+
+#about-us .block p {
+    color: #959595;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 40px 0px;
+}
+
+/*--
+    blog Start
+--*/
+
+#order {
+    padding-top: 75px;
+    padding-bottom: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#order .block .heading {
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.post {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.post:hover img {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.post-img {
+    flex-basis: 50%;
+    overflow: hidden;
+}
+
+.post-img img {
+    transition: all 0.8s ease-out;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.post-content {
+    background-color: #fff;
+    position: relative;
+    flex-basis: 50%;
+    text-align: center;
+    padding: 15px;
+}
+
+.post-content::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    background: #fff;
+    transform: rotate(45deg);
+    margin-left: -15px;
+}
+
+.post-content h3 {
+    padding: 0px 10px 20px;
+    margin-bottom: 20px;
+    line-height: 26px;
+    position: relative;
+}
+
+.post-content h3:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 90px;
+    height: 1px;
+    background: #CBC4B5;
+    margin-left: -45px;
+}
+
+.post-content h3 a {
+    color: #323232;
+    font-size: 20px;
+    display: block;
+}
+
+.post-content h3 a:hover {
+    color: yellow;
+}
+
+#order .block .btn-more-info {
+    float: right;
+    padding: 28px 102.5px;
+    border-radius: 0px;
+    background:yellow;
+    color: #fff;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+}
+
+#order .block .btn-more-info:hover {
+    background: transparent;
+    color:yellow;
+    border: 1px solid yellow;
+}
+
+.order-single-page .post-thumb {
+    margin-bottom: 10px;
+}
+
+.order-single-page .post-title {
+    margin-bottom: 10px;
+}
+
+.order-single-page .post-meta {
+    margin-bottom: 20px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--
+    price Start
+--*/
+
+#price {
+    padding: 70px 0px;
+}
+
+#price .block>p {
+    color: #9D9D9D;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 40px 133px 0;
+    text-align: center;
+}
+
+#price .block .pricing-list {
+    padding-top: 85px;
+}
+
+#price .block .pricing-list ul {
+    padding: 0 0 30px;
+    margin: 0;
+}
+
+#price .block .pricing-list ul li {
+    padding: 21px 0px;
+}
+
+#price .block .pricing-list ul li .item .item-title {
+    position: relative;
+}
+
+#price .block .pricing-list ul li .item .item-title h2 {
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+    background: #fff;
+}
+
+#price .block .pricing-list ul li .item .item-title .border-bottom {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    /* border: 1px dotted #C9C9C9; */
+    margin-top: 20px;
+}
+
+#price .block .pricing-list ul li .item .item-title span {
+    float: right;
+    color: #938463;
+}
+
+#price .block .pricing-list ul li .item p {
+    padding: 12px 0 0px;
+    color: #949494;
+}
+
+#price .block .pricing-list .btn {
+    padding: 28px 105px;
+    border-radius: 0px;
+    background: none;
+    color:goldenrod;
+    border: 4px solid goldenrod;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+}
+
+#price .block .pricing-list .btn:hover {
+    background:goldenrod;
+    color:whitesmoke;
+}
+
+/*  */
+
+/*--
+    contact-us Start
+--*/
+
+#contact-us {
+    padding: 70px 0px;
+}
+
+#contact-us .block .title {
+    padding: 20px 0;
+}
+
+#contact-us .block form {
+    padding-bottom: 20px;
+}
+
+#contact-us .block form input {
+    height: 48px;
+    border-radius: 0px;
+    box-shadow: none;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+}
+
+#contact-us .block form input:focus {
+    border: 2px solid #7EC3BB;
+}
+
+#contact-us .block form textarea {
+    height: 140px;
+    border-radius: 0px;
+    box-shadow: none;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+}
+
+#contact-us .block form textarea:focus {
+    border: 2px solid #7EC3BB;
+}
+
+#contact-us .block button {
+    background:goldenrod;
+    float: right;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0px;
+    border: 0px;
+    width: 512px;
+    height: 50px;
+    padding-top: 15px;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+}
+
+/*--
+    footer Start
+--*/
+
+#footer {
+    padding: 70px 0px;
+}
+
+#footer .gallery li {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px !important;
+}
+
+#footer .gallery li img {
+    width: 80px;
+    height: auto;
+}
+
+#footer .block h3 {
+    color: #2E2E2E;
+    padding-bottom: 25px;
+}
+
+#footer .block h3 span {
+    color:goldenrod;
+}
+
+#footer .block .order ul,
+#footer .block .info ul,
+#footer .block .gallary ul {
+    padding-top: 20px;
+}
+
+#footer .block .order ul li,
+#footer .block .info ul li,
+#footer .block .gallary ul li {
+    margin-bottom: 20px;
+}
+
+#footer .block .order ul li h4,
+#footer .block .info ul li h4,
+#footer .block .gallary ul li h4 {
+    padding-bottom: 10px;
+    display: block;
+    color:goldenrod;
+}
+
+#footer .block .order ul li h4 i,
+#footer .block .info ul li h4 i,
+#footer .block .gallary ul li h4 i {
+    color: #555;
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+#footer .block .order ul li h4 a,
+#footer .block .info ul li h4 a,
+#footer .block .gallary ul li h4 a {
+    color:goldenrod;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#footer .block .order ul li p,
+#footer .block .info ul li p,
+#footer .block .info ul li p a,
+#footer .block .gallary ul li p {
+    color: #474747;
+    font-size: 14px;
+}
+
+#footer .block .info ul li p a:hover {
+    color:goldenrod;
+}
+
+#footer .block .social-media-link h3 {
+    font-size: 20px;
+    padding-bottom: 15px;
+    padding-top: 30px;
+    margin-left: 40%;
+}
+
+#footer .block .social-media-link h3 span {
+    color:goldenrod;
+    margin-left: 20px;
+}
+
+#footer .block .social-media-link ul li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10%;
+}
+
+#footer .block .social-media-link ul li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 8px;
+    border-radius: 100%;
+    background: #B0B0B0;
+    color: #FFFFFF;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+    
+}
+
+#footer .block .social-media-link ul li a:hover {
+    background: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+    color:black;
+}
+
+/*--
+    footer-bottom Start
+--*/
+
+#footer-bottom {
+    background: #E9E9E9;
+    padding: 20px 0px;
+}
+
+#footer-bottom p {
+    text-align: center;
+    padding-top: 12px;
+    color: #454545;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#footer-bottom p a {
+    color:goldenrod;
+}
+
+/* slider */
+
+#slider {
+    padding-bottom: 50px;
+}
+
+.up {
+    float: right;
+    padding-right: 65px;
+}
+
+
+
+.slick-slide {
+    outline: 0;
+}
+
+.slick-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slick-dots li {
+    display: inline-block;
+}
+
+.slick-dots li button {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s ease;
+    border: 0;
+    color: transparent;
+    padding: 0;
+    background: #DADADA;
+}
+
+.slick-dots li button:focus {
+    outline: 0;
+}
+
+.slick-dots li.slick-active button {
+    background:goldenrod;
+}
+
+.gallery-slider .slick-arrow {
+    border: 0;
+    background: transparent;
+    font-size: 30px;
+    position: absolute;
+    top: -65px;
+    right: 0;
+}
+
+.gallery-slider .slick-arrow:focus {
+    outline: 0;
+}
+
+.gallery-slider .prevArrow {
+    display: none !important;
+}
+
+.gallery-slider img {
+    padding: 20px;
+}
+
+.pagination {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
+
+.pagination>li {
+    display: inline-block;
+}
+
+.pagination .page-item .page-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    border: 1px solid #d1d1d1;
+    text-align: center;
+    margin-right: 6px;
+    font-weight: 700;
+    color:goldenrod
+}
+
+.pagination .page-item .page-link:hover {
+    background:goldenrod;
+    color: #fff
+}
+
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+    border-radius: 0;
+}
+
+.pagination .page-item.active .page-link {
+    background:goldenrod;
+    color: #fff;
+    border-color:goldenrod
+}
+
+.btn-default {
+    background:goldenrod;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0px;
+    border: 0px;
+    padding: 10px 25px;
+}
